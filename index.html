@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RETRO REVIVAL - CulturalCouture: Weaving Stories, Wearing Heritage</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            background-color: #f7f7f7;
+            color: #4e4e4e;
+            margin: 20px;
+        }
+        h1 {
+            color: #9e2a2f;
+        }
+        p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 20px;
+            border-radius: 5px;
+            background-color: #ffebcd;
+        }
+        #intro {
+            font-size: 20px;
+            font-weight: normal;
+            color: #2c3e50;
+            margin-top: 30px;
+        }
+        #attire-info {
+            font-size: 18px;
+            color: #2c3e50;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CulturalCouture: Weaving Stories, Wearing Heritage</h1>
+    <p>Welcome to <strong>CulturalCouture*</strong>, where the timeless traditions of Indian heritage meet the elegance of haute couture. Immerse yourself in the rich cultural landscape of India, where intricate embroidery, vibrant colors, and exquisite craftsmanship come together to create breathtaking works of art. From the opulent silks of South India to the intricate weaves of North India, our platform celebrates the diversity and beauty of traditional Indian attire, while also showcasing the innovative designs and styles that are redefining the future of Indian fashion.</p>
+    
+    <p>Select a traditional Indian attire to explore:</p>
+    <select id="attire-select">
+        <option value="saree">Saree</option>
+        <option value="lehenga">Lehenga</option>
+        <option value="kurta">Kurta</option>
+        <option value="salwar-kameez">Salwar Kameez</option>
+        <option value="dhoti">Dhoti</option>
+    </select>
+    
+    <div id="attire-info"></div>
+
+    <script>
+        document.getElementById("attire-select").addEventListener("change", function() {
+            let attireDescriptions = {
+                saree: "The saree is a timeless symbol of grace and elegance, draped in a way that enhances its beauty. Each region in India offers a distinct style, from the Kanjivarams of South India to the Banarasi sarees of the North.",
+                lehenga: "Lehengas, often paired with cholis, are a popular attire for festivals and weddings. With intricate embroidery and luxurious fabrics, lehengas capture the essence of celebration and tradition.",
+                kurta: "A kurta is a versatile garment worn by both men and women, often paired with a salwar, jeans, or leggings. It blends comfort with cultural heritage and is perfect for various occasions.",
+                'salwar-kameez': "The salwar kameez, with its long tunic (kameez) and flowing pants (salwar), is a staple of Indian fashion. It is known for its comfort and elegance, suitable for both casual and formal settings.",
+                dhoti: "The dhoti is an ancient Indian garment, traditionally worn by men. It represents a cultural legacy that dates back thousands of years and is often worn during religious ceremonies and festivals."
+            };
+            document.getElementById("attire-info").innerText = attireDescriptions[this.value];
+        });
+    </script>
+</body>
+</html>
